@@ -18,15 +18,3 @@ jobs:
         run: |
           chmod +x build.sh
           ./build.sh
-      - name: Download and unzip the Build Wrapper for Linux
-        run: |
-          sudo wget https://sonarcloud.io/static/cpp/build-wrapper-linux-x86.zip
-          sudo unzip build-wrapper-linux-x86.zip
-      - name: Execute the Build Wrapper
-        run: ./build-wrapper-linux-x86/build-wrapper-linux-x86-64 --out-dir bw-output ./build.sh
-      - name: Download and unzip the SonarScanner for Linux
-        run: |
-          sudo wget https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-4.4.0.2170-linux.zip
-          sudo unzip sonar-scanner-cli-4.4.0.2170-linux.zip
-      - name: Execute the SonarScanner
-        run: ./sonar-scanner-4.4.0.2170-linux/bin/sonar-scanner -Dsonar.organization=to-s -Dsonar.projectKey=to-s_sonarcloud_example_cpp-cmake-linux-otherci -Dsonar.sources=. -Dsonar.cfamily.build-wrapper-output=bw-output -Dsonar.host.url=https://sonarcloud.io -X
