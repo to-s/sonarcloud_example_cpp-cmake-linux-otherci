@@ -12,7 +12,7 @@
 #SONAR_TOKEN= # access token from SonarCloud projet creation page -Dsonar.login=XXXX: here it is defined in the environment through the CI
 SONAR_PROJECT_KEY=sonarcloud_example_cpp-cmake-linux-otherci # project name from SonarCloud projet creation page -Dsonar.projectKey=XXXX
 SONAR_PROJECT_NAME=sonarcloud_example_cpp-cmake-linux-otherci # project name from SonarCloud projet creation page -Dsonar.projectName=XXXX
-SONAR_ORGANIZATION=sonarcloud # organization name from SonarCloud projet creation page -Dsonar.organization=ZZZZ
+SONAR_ORGANIZATION=to-s # organization name from SonarCloud projet creation page -Dsonar.organization=ZZZZ
 
 # Set default to SONAR_HOST_URL in not provided
 SONAR_HOST_URL=${SONAR_HOST_URL:-https://sonarcloud.io}
