@@ -10,7 +10,7 @@
 
 # Configuration for SonarCloud
 #SONAR_TOKEN= # access token from SonarCloud projet creation page -Dsonar.login=XXXX: here it is defined in the environment through the CI
-SONAR_PROJECT_KEY=sonarcloud_example_cpp-cmake-linux-otherci # project name from SonarCloud projet creation page -Dsonar.projectKey=XXXX
+SONAR_PROJECT_KEY=to-s_sonarcloud_example_cpp-cmake-linux-otherci # project name from SonarCloud projet creation page -Dsonar.projectKey=XXXX
 SONAR_PROJECT_NAME=sonarcloud_example_cpp-cmake-linux-otherci # project name from SonarCloud projet creation page -Dsonar.projectName=XXXX
 SONAR_ORGANIZATION=to-s # organization name from SonarCloud projet creation page -Dsonar.organization=ZZZZ
 
@@ -47,5 +47,5 @@ build-wrapper-linux-x86-64 --out-dir build_wrapper_output_directory cmake --buil
 [[ -v SONAR_ORGANIZATION ]] && SONAR_ORGANIZATION_CMD_ARG="-Dsonar.organization=${SONAR_ORGANIZATION}"
 [[ -v SONAR_PROJECT_NAME ]] && SONAR_PROJECT_NAME_CMD_ARG="-Dsonar.projectName=${SONAR_PROJECT_NAME}"
 SONAR_OTHER_ARGS="-Dsonar.projectVersion=1.0 -Dsonar.sources=src -Dsonar.cfamily.build-wrapper-output=build_wrapper_output_directory -Dsonar.sourceEncoding=UTF-8"
-sonar-scanner -Dsonar.host.url="${SONAR_HOST_URL}" -Dsonar.projectKey=${SONAR_PROJECT_KEY} ${SONAR_OTHER_ARGS} ${SONAR_PROJECT_NAME_CMD_ARG} ${SONAR_TOKEN_CMD_ARG} ${SONAR_ORGANIZATION_CMD_ARG}
+sonar-scanner -Dsonar.host.url="${SONAR_HOST_URL}" -Dsonar.projectKey=${SONAR_PROJECT_KEY} ${SONAR_OTHER_ARGS} ${SONAR_TOKEN_CMD_ARG} ${SONAR_ORGANIZATION_CMD_ARG}
 
