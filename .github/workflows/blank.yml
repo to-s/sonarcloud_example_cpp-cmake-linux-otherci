@@ -15,7 +15,9 @@ jobs:
         with:
           fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
       - name: build
-        run: ./build.sh
+        run: |
+          chmod +x build.sh
+          ./build.sh
       - name: Download and unzip the Build Wrapper for Linux
         run: |
           sudo wget https://sonarcloud.io/static/cpp/build-wrapper-linux-x86.zip
